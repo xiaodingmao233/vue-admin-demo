@@ -41,24 +41,24 @@
 import sidebarNav from './component/sidebar-nav'
 import { mapState } from 'vuex'
 export default {
-    data() {
-        return {
-          isCollapse: false
-        }
-    },
-    computed: {
-        ...mapState(['isSidebarNavCollapse'])
-    },
-    components: {
-        sidebarNav
-    },
-    methods: {
-        loginOut() {
-            this.$store.commit('LOGIN_OUT')
-            /* 防止切换角色时addRoutes重复添加路由导致出现警告 */
-            window.location.reload()
-        }
+  data() {
+    return {
+      isCollapse: false
     }
+  },
+  computed: {
+    ...mapState(['isSidebarNavCollapse'])
+  },
+  components: {
+    sidebarNav
+  },
+  methods: {
+    loginOut() {
+      this.$store.commit('LOGIN_OUT')
+      /* 防止切换角色时addRoutes重复添加路由导致出现警告 */
+      window.location.reload()
+    }
+  }
 }
 </script>
 

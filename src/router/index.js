@@ -8,6 +8,14 @@ import Forbidden from '../pages/errorPage/403'
 
 Vue.use(VueRouter)
 
+// 解决重复路由跳转问题
+// 获取原型对象上的push函数
+const originalPush = VueRouter.prototype.push
+// 修改原型对象中的push方法
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 // 初始化路由
 const routes = [
   {

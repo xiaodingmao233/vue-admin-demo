@@ -1,15 +1,15 @@
 <template>
-    <el-menu
-        :collapse="isCollapse"
-        :collapse-transition="false"
-        background-color="#304156"
-        text-color="#eee"
-        active-text-color="#4dbcff"
-        :default-active="currentMenu"
-    >
-    <div class="logo-aside"></div>
-        <DynamicMenu :menuList="sidebarMenu"></DynamicMenu>
-    </el-menu>
+  <el-menu
+    :collapse="isCollapse"
+    :collapse-transition="false"
+    background-color="#304156"
+    text-color="#eee"
+    active-text-color="#4dbcff"
+    :default-active="currentMenu"
+  >
+  <div class="logo-aside"></div>
+    <DynamicMenu :menuList="sidebarMenu"></DynamicMenu>
+  </el-menu>
 </template>
 
 <script>
@@ -17,18 +17,18 @@ import DynamicMenu from '@/components/dynamic-menu'
 import { mapState } from 'vuex'
 
 export default {
-    props: ['is-collapse'],
-    data() {
-        return {}
-    },
-    computed: {
-        ...mapState(['isSidebarNavCollapse']),
-        ...mapState('permission', ['sidebarMenu', 'currentMenu'])
-    },
-    methods: {},
-    components: {
-        DynamicMenu
-    }
+  props: ['is-collapse'],
+  data() {
+    return {}
+  },
+  computed: {
+    ...mapState(['isSidebarNavCollapse']),
+    ...mapState('permission', ['sidebarMenu', 'currentMenu'])
+  },
+  methods: {},
+  components: {
+    DynamicMenu
+  }
 }
 </script>
 
