@@ -76,7 +76,8 @@ export default {
       let token = data.token
 
       this.$store.commit('LOGIN_IN', token)
-      this.$router.replace('/')
+      // this.$router.replace('/')
+      this.$router.push('/')
     }
   }
 }

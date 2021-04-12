@@ -30,3 +30,16 @@ export default {
     }
 }
 </script>
+
+<style scoped lang="scss">
+.logo-aside {
+  width: 160px;
+  height: 57px;
+  margin: 10px 0 0 12px;
+  padding-right: 40px;
+  background: url(./logo.png) no-repeat;
+}
+.iconfont {
+  padding: 0 20px 0 5px;
+}
+</style>
