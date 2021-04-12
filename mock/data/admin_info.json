@@ -1,0 +1,8 @@
+{
+  "code": 0,
+  "message": "用户信息获取成功",
+  "data": {
+    "username": "admin",
+    "photo": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2364244149,3298797080&fm=26&gp=0.jpg"
+  }
+}

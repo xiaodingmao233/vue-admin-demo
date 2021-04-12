@@ -18,10 +18,8 @@
         </div>
         <el-dropdown>
           <div class="avatar-warp">
-            <!-- <img class="avatar" :src="photo" alt="" /> -->
-            <img class="avatar" src="https://portrait.gitee.com/uploads/avatars/user/2878/8634507_lizheng2000_1611926860.png!avatar30" alt="" />
-            <!-- <span>{{ username }}</span> -->
-            <span>用户昵称</span>
+            <img class="avatar" :src="photo" alt="" />
+            <span>{{ username }}</span>
             <i class="el-icon-arrow-down el-icon--right"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
@@ -47,7 +45,9 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isSidebarNavCollapse'])
+    ...mapState(['isSidebarNavCollapse']),
+    ...mapState(['username']), // 用户名
+    ...mapState(['photo']) // 用户头像
   },
   components: {
     sidebarNav

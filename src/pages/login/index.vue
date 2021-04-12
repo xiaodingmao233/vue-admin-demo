@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { login } from '../../api'
+import { login, getUserInfo } from '../../api'
 export default {
   name: 'LoginIndex',
   components: {},
@@ -75,7 +75,11 @@ export default {
       console.log(data)
       let token = data.token
 
+      const { photo, username } = await getUserInfo(token)
+
       this.$store.commit('LOGIN_IN', token)
+      this.$store.commit('SET_PHOTO', photo)
+      this.$store.commit('SET_USERNAME', username)
       // this.$router.replace('/')
       this.$router.push('/')
     }

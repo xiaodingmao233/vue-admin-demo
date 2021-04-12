@@ -8,3 +8,7 @@ export function login (user) {
 export function fetchPermission () {
   return axios.get('/api/permission?user=' + store.state.UserToken)
 }
+
+export function getUserInfo (token) {
+  return axios.get('/api/userinfo?user=' + token)
+}
