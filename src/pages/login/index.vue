@@ -8,10 +8,10 @@
         <h2>欢迎来到vue-admin!</h2>
         <el-form class="login-form" ref="form" :model="form">
           <el-form-item>
-            <el-input placeholder="请输入账号" v-model="form.username"></el-input>
+            <el-input placeholder="请输入账号（随便填）" v-model="form.username"></el-input>
           </el-form-item>
           <el-form-item>
-            <el-input placeholder="请输入密码" type="password" v-model="form.password" show-password></el-input>
+            <el-input placeholder="请输入密码（随便填）" type="password" v-model="form.password" show-password></el-input>
           </el-form-item>
           <el-form-item>
             <el-button class="btn" :loading="loading" type="primary" style="width: 100%" @keyup.enter="onLogin" @click="onLogin">登 录</el-button>
@@ -47,7 +47,7 @@ export default {
   props: {},
   data () {
     return {
-      // 管理员 admin 123456  普通用户 student 123456
+      // 管理员账号 admin   普通用户账号 随便填   密码随便填 
       form: {
         username: 'admin',
         password: '123456'
@@ -73,6 +73,10 @@ export default {
     async onLogin () {
       let data = await login(this.form.username)
       console.log(data)
+      let token = data.token
+
+      this.$store.commit('LOGIN_IN', token)
+      this.$router.replace('/')
     }
   }
 }
