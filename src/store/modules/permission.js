@@ -28,7 +28,7 @@ export default {
   actions: {
     async FETCH_PERMISSION({ commit, state }) {
       let permissionList = await fetchPermission()
-      console.log(permissionList)
+      // console.log(permissionList)
       // 筛选
       let routes = recursionRouter(permissionList, dynamicRouter)
       let MainContainer = DynamicRoutes.find(v => v.path === '')
