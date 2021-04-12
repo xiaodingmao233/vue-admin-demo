@@ -19,7 +19,7 @@ const dynamicRoutes = [
     name: 'order-manage',
     meta: {
       name: '订单管理',
-      icon: 'icon-email'
+      icon: 'icon-chanpinliebiaoliebiaomoshi'
     },
     children: [
       {
@@ -28,7 +28,7 @@ const dynamicRoutes = [
         component: OrderList,
         meta: {
           name: '订单列表',
-          icon: 'icon-quit'
+          icon: 'icon-dingdanliebiao'
         }
       },
       {
@@ -37,7 +37,7 @@ const dynamicRoutes = [
         component: ProductManage,
         meta: {
           name: '生产管理',
-          icon: 'icon-service'
+          icon: 'icon-shengchanguanli'
         },
         children: [
           {
@@ -46,7 +46,7 @@ const dynamicRoutes = [
             component: ProductionList,
             meta: {
               name: '生产列表',
-              icon: 'icon-nav'
+              icon: 'icon-tubiaozhizuomoban-140'
             }
           },
           {
@@ -55,7 +55,7 @@ const dynamicRoutes = [
             component: ReviewManage,
             meta: {
               name: '审核管理',
-              icon: 'icon-finance-manage'
+              icon: 'icon-wenbenshenhewancheng'
             }
           }
         ]
@@ -66,7 +66,7 @@ const dynamicRoutes = [
         component: ReturnGoods,
         meta: {
           name: '退货管理',
-          icon: 'icon-product-manage'
+          icon: 'icon-tui'
         }
       }
     ]
@@ -77,7 +77,7 @@ const dynamicRoutes = [
     name: 'goods',
     meta: {
       name: '产品管理',
-      icon: 'icon-order-manage'
+      icon: 'icon-ziyuan'
     },
     children: [
       {
@@ -86,7 +86,7 @@ const dynamicRoutes = [
         component: GoodsList,
         meta: {
           name: '产品列表',
-          icon: 'icon-home'
+          icon: 'icon-iconfontdingdan'
         }
       },
       {
@@ -95,7 +95,7 @@ const dynamicRoutes = [
         component: GoodsClassify,
         meta: {
           name: '产品分类',
-          icon: 'icon-product-manage'
+          icon: 'icon-chanpinfenlei'
         }
       }
     ]
