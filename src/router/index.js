@@ -28,15 +28,17 @@ export const DynamicRoutes = [
       requiresAuth: true,
       name: '首页'
     },
-    children: {
-      path: 'home',
-      component: Home,
-      name: 'home',
-      meta: {
-        name: '首页',
-        icon: 'icon-name'
+    children: [
+      {      
+        path: 'home',
+        component: Home,
+        name: 'home',
+        meta: {
+          name: '首页',
+          icon: 'icon-name'
+        }
       }
-    }
+    ]
   },
   {
     path: '/403',
