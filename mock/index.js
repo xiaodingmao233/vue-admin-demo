@@ -5,7 +5,6 @@ const vipLogin = require('./data/vip_login.json')
 const url = require('url')
 
 app.get('/login', (req, res) => {
-  console.log(req, res)
   const user = url.parse(req.url, true).query.user
   if (user === 'admin') {
     res.send(adminLogin)
