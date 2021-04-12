@@ -1,11 +1,13 @@
 <template>
     <el-menu
-        :collapse="isSidebarNavCollapse"
+        :collapse="isCollapse"
+        :collapse-transition="false"
         background-color="#304156"
         text-color="#eee"
         active-text-color="#4dbcff"
         :default-active="currentMenu"
     >
+    <div class="logo-aside"></div>
         <DynamicMenu :menuList="sidebarMenu"></DynamicMenu>
     </el-menu>
 </template>
@@ -15,10 +17,9 @@ import DynamicMenu from '@/components/dynamic-menu'
 import { mapState } from 'vuex'
 
 export default {
+    props: ['is-collapse'],
     data() {
-        return {
-            isCollapse: true
-        }
+        return {}
     },
     computed: {
         ...mapState(['isSidebarNavCollapse']),
@@ -31,15 +32,12 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .logo-aside {
   width: 160px;
   height: 57px;
   margin: 10px 0 0 12px;
   padding-right: 40px;
   background: url(./logo.png) no-repeat;
-}
-.iconfont {
-  padding: 0 20px 0 5px;
 }
 </style>

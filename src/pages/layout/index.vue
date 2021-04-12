@@ -43,7 +43,7 @@ import { mapState } from 'vuex'
 export default {
     data() {
         return {
-            isCollapse: false
+          isCollapse: false
         }
     },
     computed: {
@@ -71,6 +71,7 @@ export default {
   left: 0;
   .aside {
     background-color: #d3dce6;
+    // width: 200px !important;
     .aside-menu {
       height: 100%;
     }
