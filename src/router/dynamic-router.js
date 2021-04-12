@@ -59,6 +59,15 @@ const dynamicRoutes = [
             }
           }
         ]
+      },
+      {
+        path: 'returnGoods',
+        name: 'return-goods',
+        component: ReturnGoods,
+        meta: {
+          name: '退货管理',
+          icon: 'icon-product-manage'
+        }
       }
     ]
   },

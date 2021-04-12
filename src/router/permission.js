@@ -13,6 +13,19 @@ router.beforeEach((to, from, next) => {
     }
   } else {
     // 已登录
-    next()
+    if (!store.state.permission.permissionList) {
+      store.dispatch('permission/FETCH_PERMISSION').then(() => {
+        next({
+          path: to.path
+        })
+      })
+    } else {
+      // store存在权限
+      if (to.path !== '/login') {
+        next()
+      } else {
+        next(from.fullPath)
+      }
+    }
   }
 })

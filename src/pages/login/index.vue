@@ -176,7 +176,7 @@ export default {
 >>> .el-input__inner::placeholder {
   color: rgba(0, 0, 0, .3)
 }
-.btn ::v-deep .el-button {
+>>> .el-button .btn .el-button--primary {
   border-radius: 0;
 }
 </style>
