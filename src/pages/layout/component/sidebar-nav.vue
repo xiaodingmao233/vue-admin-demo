@@ -3,8 +3,8 @@
     :collapse="isCollapse"
     :collapse-transition="false"
     background-color="#304156"
-    text-color="#eee"
-    active-text-color="#4dbcff"
+    text-color="#fff"
+    active-text-color="#ffd04b"
     :default-active="currentMenu"
   >
   <div class="logo-aside"></div>
