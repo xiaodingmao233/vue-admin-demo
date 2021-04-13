@@ -71,7 +71,11 @@ export default {
   left: 0;
   .aside {
     background-color: #d3dce6;
-    // width: 200px !important;
+    // 隐藏水平滚动条
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    overflow-x: hidden;
+    overflow-y: auto;
     .aside-menu {
       height: 100%;
     }
