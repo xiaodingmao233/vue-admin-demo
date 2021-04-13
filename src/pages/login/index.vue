@@ -72,7 +72,7 @@ export default {
   methods: {
     async onLogin () {
       let data = await login(this.form.username)
-      console.log(data)
+      // console.log(data)
       let token = data.token
 
       const { photo, username } = await getUserInfo(token)

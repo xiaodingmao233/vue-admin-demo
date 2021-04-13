@@ -110,4 +110,18 @@ export default {
     background-color: #e9eef3;
   }
 }
+/*滚动条样式*/
+.aside::-webkit-scrollbar {
+  width: 4px;
+}
+.aside::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
+}
+.aside::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
 </style>
