@@ -7,6 +7,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/index.css'
 import './router/permission'
+import '@/svgIcon/index.js'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);

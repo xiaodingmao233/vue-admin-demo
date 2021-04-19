@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     首页
+    <svg-icon data_iconName="勋章" className="勋章_icon" />
   </div>
 </template>
 
