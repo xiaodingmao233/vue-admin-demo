@@ -116,10 +116,12 @@ export default {
 }
 .aside::-webkit-scrollbar-thumb {
   border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
   -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
   background: rgba(0,0,0,0.2);
 }
 .aside::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
   -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
   border-radius: 0;
   background: rgba(0,0,0,0.1);
